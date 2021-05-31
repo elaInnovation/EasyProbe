@@ -1,0 +1,15 @@
+D:\Developpements\EasyProbe\EasyProbe\EasyProbe.WatchOs\EasyProbe.WatchOs.WatchOSExtension\bin\iPhone\Debug\EasyProbe.WatchOs.WatchOSExtension.dll
+D:\Developpements\EasyProbe\EasyProbe\EasyProbe.WatchOs\EasyProbe.WatchOs.WatchOSExtension\bin\iPhone\Debug\EasyProbe.WatchOs.WatchOSExtension.pdb
+D:\Developpements\EasyProbe\EasyProbe\EasyProbe.WatchOs\EasyProbe.WatchOs.WatchOSExtension\obj\iPhone\Debug\actool\_PartialAppManifest.items
+D:\Developpements\EasyProbe\EasyProbe\EasyProbe.WatchOs\EasyProbe.WatchOs.WatchOSExtension\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
+D:\Developpements\EasyProbe\EasyProbe\EasyProbe.WatchOs\EasyProbe.WatchOs.WatchOSExtension\obj\iPhone\Debug\coremlc\_PartialAppManifest.items
+D:\Developpements\EasyProbe\EasyProbe\EasyProbe.WatchOs\EasyProbe.WatchOs.WatchOSExtension\obj\iPhone\Debug\coremlc\_BundleResourceWithLogicalName.items
+D:\Developpements\EasyProbe\EasyProbe\EasyProbe.WatchOs\EasyProbe.WatchOs.WatchOSExtension\obj\iPhone\Debug\optimized\
+D:\Developpements\EasyProbe\EasyProbe\EasyProbe.WatchOs\EasyProbe.WatchOs.WatchOSExtension\obj\iPhone\Debug\EasyProbe.WatchOs.WatchOSExtension.csprojAssemblyReference.cache
+D:\Developpements\EasyProbe\EasyProbe\EasyProbe.WatchOs\EasyProbe.WatchOs.WatchOSExtension\obj\iPhone\Debug\EasyProbe.WatchOs.WatchOSExtension.csproj.CoreCompileInputs.cache
+D:\Developpements\EasyProbe\EasyProbe\EasyProbe.WatchOs\EasyProbe.WatchOs.WatchOSExtension\obj\iPhone\Debug\EasyProbe.WatchOs.WatchOSExtension.dll
+D:\Developpements\EasyProbe\EasyProbe\EasyProbe.WatchOs\EasyProbe.WatchOs.WatchOSExtension\obj\iPhone\Debug\EasyProbe.WatchOs.WatchOSExtension.pdb
+D:\Developpements\EasyProbe\EasyProbe\EasyProbe.WatchOs\EasyProbe.WatchOs.WatchOSExtension\obj\iPhone\Debug\CopyFilesToMac\EasyProbe.WatchOs.WatchOSExtension.dll.mdb.ReferenceCopyLocalPaths.stamp
+D:\Developpements\EasyProbe\EasyProbe\EasyProbe.WatchOs\EasyProbe.WatchOs.WatchOSExtension\obj\iPhone\Debug\CopyFilesToMac\EasyProbe.WatchOs.WatchOSExtension.pdb.DebugSymbolsProjectOutputGroupOutput.stamp
+D:\Developpements\EasyProbe\EasyProbe\EasyProbe.WatchOs\EasyProbe.WatchOs.WatchOSExtension\obj\iPhone\Debug\CopyFilesToMac\Info.plist.NoneOutput.stamp
+D:\Developpements\EasyProbe\EasyProbe\EasyProbe.WatchOs\EasyProbe.WatchOs.WatchOSExtension\obj\iPhone\Debug\CopyFilesToMac\Entitlements.plist.NoneOutput.stamp

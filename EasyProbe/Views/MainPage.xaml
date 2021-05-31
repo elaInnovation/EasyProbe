@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewModels="clr-namespace:EasyProbe.ViewModel"
+             xmlns:xfshapeview="clr-namespace:XFShapeView;assembly=XFShapeView"
+             x:Class="EasyProbe.Views.MainPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.BindingContext>
+        <viewModels:MainViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Grid VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Column="0" HorizontalOptions="Start">
+                        <Image Source="{StaticResource LOGO}" Aspect="AspectFit" HeightRequest="50" Margin="10,20,0,0" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Column="1" Margin="0,20,20,0" HorizontalOptions="End">
+                        <ImageButton Source="{StaticResource SEARCH}" Aspect="AspectFit" HeightRequest="30" BackgroundColor="Transparent"
+                                     Command="{Binding SearchTags}"/>
+                    </StackLayout>
+                </Grid>
+
+                <Label Grid.Row="1"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="StartAndExpand"
+                       Text="{Binding TagName}" 
+                       TextColor="{StaticResource ela_light_blue}" 
+                       FontFamily="{StaticResource RegularFont}" 
+                       FontSize="Title"/>
+
+                <StackLayout Grid.Row="2" HorizontalOptions="CenterAndExpand" VerticalOptions="End" 
+                             IsVisible="{Binding Picto1Page}">
+                    <Label Text="15 years" TextColor="{StaticResource ela_light_blue}" FontFamily="{StaticResource RegularFont}" FontSize="70" FontAttributes="Bold"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" HorizontalOptions="CenterAndExpand" VerticalOptions="End" 
+                             IsVisible="{Binding Picto2Page}">
+                    <Label Text="{Binding TagTemperature, StringFormat='{0:F2}°C'}" TextColor="{StaticResource ela_light_blue}" FontFamily="{StaticResource RegularFont}" FontSize="70" FontAttributes="Bold"/>
+                    <Label Text="{Binding TagFarenheit, StringFormat='{0:F2}°F'}" TextColor="{StaticResource ela_light_blue}" FontFamily="{StaticResource RegularFont}" FontSize="20" HorizontalOptions="EndAndExpand" Margin="0,-20,0,0"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" HorizontalOptions="CenterAndExpand" VerticalOptions="End" 
+                             IsVisible="{Binding Picto3Page}">
+                    <Label Text="IP68" TextColor="{StaticResource ela_light_blue}" FontFamily="{StaticResource RegularFont}" FontSize="70" FontAttributes="Bold"/>
+                </StackLayout>
+
+
+                <RelativeLayout Grid.Row="4" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
+                    <Image Source="{StaticResource VAGUES}" Aspect="AspectFill" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1, Constant=0}"/>
+                    <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1, Constant=1}"
+                          Margin="30,0,30,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <xfshapeview:ShapeView
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            ShapeType="Circle"
+							Margin="0,0,0,0"
+							HeightRequest="50"
+							WidthRequest="50"
+                            Color="{Binding Picto1}">
+                            <xfshapeview:ShapeView.Content>
+                                <ImageButton Source="{StaticResource PICTO_AUTONOMIE}" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="30" BackgroundColor="Transparent"
+                                             Command="{Binding CommandPicto1}"/>
+                            </xfshapeview:ShapeView.Content>
+                            <xfshapeview:ShapeView.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding CommandPicto1}"/>
+                            </xfshapeview:ShapeView.GestureRecognizers>
+                        </xfshapeview:ShapeView>
+
+                        <xfshapeview:ShapeView
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            ShapeType="Circle"
+							Margin="0,0,0,0"
+							HeightRequest="50"
+							WidthRequest="50"
+                            Color="{Binding Picto2}">
+                            <xfshapeview:ShapeView.Content>
+                                <ImageButton Source="{StaticResource PICTO_TEMP}" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="30" BackgroundColor="Transparent"
+                                              Command="{Binding CommandPicto2}"/>
+                            </xfshapeview:ShapeView.Content>
+                            <xfshapeview:ShapeView.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding CommandPicto2}"/>
+                            </xfshapeview:ShapeView.GestureRecognizers>
+                        </xfshapeview:ShapeView>
+
+                        <xfshapeview:ShapeView
+                            Grid.Column="2"
+                            Grid.Row="1"
+                            ShapeType="Circle"
+							Margin="0,0,0,0"
+							HeightRequest="50"
+							WidthRequest="50"
+                            Color="{Binding Picto3}">
+                            <xfshapeview:ShapeView.Content>
+                                <ImageButton Source="{StaticResource PICTO_IP}" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="30" BackgroundColor="Transparent"
+                                              Command="{Binding CommandPicto3}"/>
+                            </xfshapeview:ShapeView.Content>
+                            <xfshapeview:ShapeView.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding CommandPicto3}"/>
+                            </xfshapeview:ShapeView.GestureRecognizers>
+                        </xfshapeview:ShapeView>
+
+
+                    </Grid>
+                </RelativeLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

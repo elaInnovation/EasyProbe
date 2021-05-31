@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="EasyProbe.Ressources.Colors">
+
+    <Color x:Key="ela_king_blue">#004f9f</Color>
+    <Color x:Key="ela_light_blue">#006fe0</Color>
+    <Color x:Key="ela_sky_blue">#0096d6</Color>
+    <Color x:Key="ela_light_grey">#d8d8d8</Color>
+    <Color x:Key="ela_grey">#424242</Color>
+    <Color x:Key="ela_white">#FFFF</Color>
+</ResourceDictionary>
+

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_AppExtensionDebugSymbolProperties Include="EasyProbe.WatchOs.WatchOSExtension.appex">
+      <NativeExecutable>EasyProbe.WatchOs.WatchOSExtension</NativeExecutable>
+      <CompiledArchitectures>ARMv7k</CompiledArchitectures>
+      <NoDSymUtil>false</NoDSymUtil>
+      <NoSymbolStrip>False</NoSymbolStrip>
+      <SymbolsList>\Users\be-dev\Library\Caches\Xamarin\mtbs\builds\EasyProbe.WatchOs.WatchOSExtension\dabc8a16a5130d7a6ff405197c5bda7e9a47c9cca653518bac6d60ff14a330f5\obj\iPhone\Debug\mtouch-symbols.list</SymbolsList>
+    </_AppExtensionDebugSymbolProperties>
+  </ItemGroup>
+</Project>

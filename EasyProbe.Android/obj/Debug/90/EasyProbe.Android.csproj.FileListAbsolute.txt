@@ -1,0 +1,3 @@
+D:\Developpements\EasyProbe\EasyProbe\EasyProbe.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
+D:\Developpements\EasyProbe\EasyProbe\EasyProbe.Android\obj\Debug\90\build.props
+D:\Developpements\EasyProbe\EasyProbe\EasyProbe.Android\obj\Debug\90\adb.props

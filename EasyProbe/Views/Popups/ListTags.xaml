@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<rg:PopupPage
+    xmlns:rg="http://rotorgames.com"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="EasyProbe.Views.Popups.ListTags">
+
+    <rg:PopupPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="EntryStyle" TargetType="Entry">
+                <Setter Property="PlaceholderColor" Value="#9cdaf1" />
+                <Setter Property="TextColor" Value="#7dbbe6" />
+            </Style>
+        </ResourceDictionary>
+    </rg:PopupPage.Resources>
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <AbsoluteLayout>
+            <Frame WidthRequest="300"
+                   HeightRequest="250"
+                   AbsoluteLayout.LayoutFlags="All"
+                   AbsoluteLayout.LayoutBounds="0.5,0,1,1"
+                   HasShadow="False"
+                   CornerRadius="10">
+                <Frame.Content>
+                    <StackLayout>
+                        <Label Text="Sensors list" 
+                               TextColor="{StaticResource ela_light_blue}" 
+                               FontFamily="{StaticResource RegularFont}" 
+                               FontSize="30"
+                               FontAttributes="Bold"/>
+                        <ListView
+                            ItemsSource="{Binding Items}"
+                            HasUnevenRows="False"
+                            SelectedItem="{Binding CurrentItem, Mode=TwoWay}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout>
+                                            <Label Text="{Binding TagName}" 
+                                               TextColor="{StaticResource ela_light_blue}" 
+                                                   HorizontalOptions="Start"
+                                                   VerticalOptions="CenterAndExpand"
+                                               FontFamily="{StaticResource RegularFont}" 
+                                               FontSize="20">
+                                            </Label>
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                </Frame.Content>
+            </Frame>
+        </AbsoluteLayout>
+        
+    </StackLayout>
+    
+    
+    
+
+</rg:PopupPage>
