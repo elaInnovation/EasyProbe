@@ -2489,11 +2489,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Developpements\\EasyProbe\\EasyProbe\\EasyProbe.iOS\\EasyProbe.iOS.csproj",
+      "projectUniqueName": "D:\\Developpements\\Easy-Probe\\EasyProbe.iOS\\EasyProbe.iOS.csproj",
       "projectName": "EasyProbe.iOS",
-      "projectPath": "D:\\Developpements\\EasyProbe\\EasyProbe\\EasyProbe.iOS\\EasyProbe.iOS.csproj",
+      "projectPath": "D:\\Developpements\\Easy-Probe\\EasyProbe.iOS\\EasyProbe.iOS.csproj",
       "packagesPath": "C:\\Users\\Valentin\\.nuget\\packages\\",
-      "outputPath": "D:\\Developpements\\EasyProbe\\EasyProbe\\EasyProbe.iOS\\obj\\",
+      "outputPath": "D:\\Developpements\\Easy-Probe\\EasyProbe.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2516,8 +2516,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "D:\\Developpements\\EasyProbe\\EasyProbe\\EasyProbe\\EasyProbe.csproj": {
-              "projectPath": "D:\\Developpements\\EasyProbe\\EasyProbe\\EasyProbe\\EasyProbe.csproj"
+            "D:\\Developpements\\Easy-Probe\\EasyProbe\\EasyProbe.csproj": {
+              "projectPath": "D:\\Developpements\\Easy-Probe\\EasyProbe\\EasyProbe.csproj"
             }
           }
         }

@@ -2952,11 +2952,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Developpements\\EasyProbe\\EasyProbe\\EasyProbe.Android\\EasyProbe.Android.csproj",
+      "projectUniqueName": "D:\\Developpements\\Easy-Probe\\EasyProbe.Android\\EasyProbe.Android.csproj",
       "projectName": "EasyProbe.Android",
-      "projectPath": "D:\\Developpements\\EasyProbe\\EasyProbe\\EasyProbe.Android\\EasyProbe.Android.csproj",
+      "projectPath": "D:\\Developpements\\Easy-Probe\\EasyProbe.Android\\EasyProbe.Android.csproj",
       "packagesPath": "C:\\Users\\Valentin\\.nuget\\packages\\",
-      "outputPath": "D:\\Developpements\\EasyProbe\\EasyProbe\\EasyProbe.Android\\obj\\",
+      "outputPath": "D:\\Developpements\\Easy-Probe\\EasyProbe.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2979,8 +2979,8 @@
       "frameworks": {
         "monoandroid10.0": {
           "projectReferences": {
-            "D:\\Developpements\\EasyProbe\\EasyProbe\\EasyProbe\\EasyProbe.csproj": {
-              "projectPath": "D:\\Developpements\\EasyProbe\\EasyProbe\\EasyProbe\\EasyProbe.csproj"
+            "D:\\Developpements\\Easy-Probe\\EasyProbe\\EasyProbe.csproj": {
+              "projectPath": "D:\\Developpements\\Easy-Probe\\EasyProbe\\EasyProbe.csproj"
             }
           }
         }

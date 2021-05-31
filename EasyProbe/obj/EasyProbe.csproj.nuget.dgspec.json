@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Developpements\\EasyProbe\\EasyProbe\\EasyProbe\\EasyProbe.csproj": {}
+    "D:\\Developpements\\Easy-Probe\\EasyProbe\\EasyProbe.csproj": {}
   },
   "projects": {
-    "D:\\Developpements\\EasyProbe\\EasyProbe\\EasyProbe\\EasyProbe.csproj": {
+    "D:\\Developpements\\Easy-Probe\\EasyProbe\\EasyProbe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Developpements\\EasyProbe\\EasyProbe\\EasyProbe\\EasyProbe.csproj",
+        "projectUniqueName": "D:\\Developpements\\Easy-Probe\\EasyProbe\\EasyProbe.csproj",
         "projectName": "EasyProbe",
-        "projectPath": "D:\\Developpements\\EasyProbe\\EasyProbe\\EasyProbe\\EasyProbe.csproj",
+        "projectPath": "D:\\Developpements\\Easy-Probe\\EasyProbe\\EasyProbe.csproj",
         "packagesPath": "C:\\Users\\Valentin\\.nuget\\packages\\",
-        "outputPath": "D:\\Developpements\\EasyProbe\\EasyProbe\\EasyProbe\\obj\\",
+        "outputPath": "D:\\Developpements\\Easy-Probe\\EasyProbe\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
