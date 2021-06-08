@@ -6,6 +6,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android;
+using AndroidX.Core.App;
 
 namespace EasyProbe.Droid
 {
@@ -23,6 +25,8 @@ namespace EasyProbe.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             Acr.UserDialogs.UserDialogs.Init(this);
+            ActivityCompat.RequestPermissions(this,new String[]{
+                Manifest.Permission.BluetoothAdmin, Manifest.Permission.AccessFineLocation, Manifest.Permission.AccessCoarseLocation}, 0);
             LoadApplication(new App());
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

@@ -2,3 +2,13 @@
 *.v2
 .vs/EasyProbe/v16/.suo
 .vs/EasyProbe/v16/.suo
+.vs/EasyProbe/v16/.suo
+EasyProbe/bin
+EasyProbe/obj
+EasyProbe.Android/bin
+EasyProbe.Android/obj
+EasyProbe.iOS/bin
+EasyProbe.iOS/obj
+.vs/EasyProbe/v16/.suo
+.vs/EasyProbe/v16/.suo
+*.user

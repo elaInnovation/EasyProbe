@@ -3,5 +3,6 @@
   <PropertyGroup>
     <SelectedDevice>HUAWEI ANE-LX1</SelectedDevice>
     <AndroidDesignerPreferredTheme>MainTheme</AndroidDesignerPreferredTheme>
+    <ActiveDebugProfile>HUAWEI ANE-LX1</ActiveDebugProfile>
   </PropertyGroup>
 </Project>

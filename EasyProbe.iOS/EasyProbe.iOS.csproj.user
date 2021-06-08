@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <SelectedDevice>Appareil distant</SelectedDevice>
+    <SelectedDevice>Appareil local</SelectedDevice>
     <TargetiOSDevice>&lt;%3fxml version="1.0" encoding="UTF-8"%3f&gt;
 &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
 &lt;plist version="1.0"&gt;
@@ -13,7 +13,7 @@
 		&lt;key&gt;model&lt;/key&gt;
 		&lt;string&gt;iPhone10,4&lt;/string&gt;
 		&lt;key&gt;os-version&lt;/key&gt;
-		&lt;string&gt;14.4&lt;/string&gt;
+		&lt;string&gt;14.6&lt;/string&gt;
 		&lt;key&gt;os&lt;/key&gt;
 		&lt;string&gt;iOS&lt;/string&gt;
 	&lt;/dict&gt;
@@ -22,5 +22,7 @@
 </TargetiOSDevice>
     <DeveloperId>be.elainnovation%40icloud.com</DeveloperId>
     <DevelopmentTeamId>UUH5ZAW7D2</DevelopmentTeamId>
+    <DefaultDevice>iPhone 12 iOS 14.4</DefaultDevice>
+    <ActiveDebugProfile>Appareil local</ActiveDebugProfile>
   </PropertyGroup>
 </Project>

@@ -5,6 +5,7 @@ using MvvmHelpers.Commands;
 using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace EasyProbe.ViewModel
@@ -42,6 +43,13 @@ namespace EasyProbe.ViewModel
         public ICommand CommandPicto1 => new AsyncCommand(commandPicto1);
         public ICommand CommandPicto2 => new AsyncCommand(commandPicto2);
         public ICommand CommandPicto3 => new AsyncCommand(commandPicto3);
+        public ICommand OpenBasicWebsite => new AsyncCommand(OnOpenBasicWebsite);
+
+
+        async Task OnOpenBasicWebsite()
+        {
+            await Browser.OpenAsync(new Uri("https://elainnovation.com/produit/blue-puck-t-probe/"), BrowserLaunchMode.SystemPreferred);
+        }
 
         Task OpenListTags() => NavigationService.NavigateToPopupAsync<ListTagsViewModel>(true);
         

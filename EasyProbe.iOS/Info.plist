@@ -24,23 +24,25 @@
 	<key>CFBundleDisplayName</key>
 	<string>EasyProbe</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.companyname.EasyProbe</string>
+	<string>com.ela.innovation.easyprobe</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
 	<key>CFBundleName</key>
 	<string>EasyProbe</string>
-	<key>XSAppIconAssets</key>
-	<string>Assets.xcassets/AppIcons.appiconset</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>bluetooth-central</string>
 		<string>bluetooth-peripheral</string>
 	</array>
 	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>YOUR CUSTOM MESSAGE</string>
+	<string>Allow Bluetooth to detect ELA sensors around you</string>
 	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>YOUR CUSTOM MESSAGE</string>
+	<string>Allow Bluetooth to detect ELA sensors around you</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1</string>
+	<key>CFBundleIconName</key>
+	<string>Assets.xcassets/AppIcons.appiconset</string>
+	<key>XSAppIconAssets</key>
+	<string>Assets.xcassets/AppIcons.appiconset</string>
 </dict>
 </plist>

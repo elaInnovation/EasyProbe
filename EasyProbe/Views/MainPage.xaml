@@ -31,7 +31,11 @@
                     </Grid.RowDefinitions>
 
                     <StackLayout Grid.Column="0" HorizontalOptions="Start">
-                        <Image Source="{StaticResource LOGO}" Aspect="AspectFit" HeightRequest="50" Margin="10,20,0,0" />
+                        <Image Source="{StaticResource LOGO}" Aspect="AspectFit" HeightRequest="50" Margin="10,20,0,0">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenBasicWebsite}"/>
+                            </Image.GestureRecognizers>
+                        </Image>
                     </StackLayout>
 
                     <StackLayout Grid.Column="1" Margin="0,20,20,0" HorizontalOptions="End">
@@ -50,6 +54,7 @@
 
                 <StackLayout Grid.Row="2" HorizontalOptions="CenterAndExpand" VerticalOptions="End" 
                              IsVisible="{Binding Picto1Page}">
+                    <Label Text="Up to" TextColor="{StaticResource ela_light_blue}" FontFamily="{StaticResource RegularFont}" FontSize="20" HorizontalOptions="StartAndExpand"/>
                     <Label Text="15 years" TextColor="{StaticResource ela_light_blue}" FontFamily="{StaticResource RegularFont}" FontSize="70" FontAttributes="Bold"/>
                 </StackLayout>
 
@@ -62,6 +67,7 @@
                 <StackLayout Grid.Row="2" HorizontalOptions="CenterAndExpand" VerticalOptions="End" 
                              IsVisible="{Binding Picto3Page}">
                     <Label Text="IP68" TextColor="{StaticResource ela_light_blue}" FontFamily="{StaticResource RegularFont}" FontSize="70" FontAttributes="Bold"/>
+                    <Label Text="Waterproof grade" TextColor="{StaticResource ela_light_blue}" FontFamily="{StaticResource RegularFont}" FontSize="20" HorizontalOptions="EndAndExpand" Margin="0,-20,0,0"/>
                 </StackLayout>
 
 
