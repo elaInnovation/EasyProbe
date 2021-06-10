@@ -1,5 +1,7 @@
 # EasyProbe
-ELA Innovation provide this project for Visual Studio (Xamarin Framework) to use and help users to intergrate easily the Tags provide by ELA Innovation Company. You can directly clone this project from Github. This project contains the code of a simple app to manage Bluetooth scanner for your mobile project and use Gatt and Services to use the connected mode from our Bluetooth tag. You can found the app on the Play Store : TO DO
+ELA Innovation provide this project for Visual Studio (Xamarin Framework) to use and help users to intergrate easily the Tags provide by ELA Innovation Company. You can directly clone this project from Github. This project contains the code of a simple app to manage Bluetooth scanner for your mobile project and use Gatt and Services to use the connected mode from our Bluetooth tag. 
+
+**You wil found all information about the app on the Play Store as soon as possible**
 
 ## Build and deployment
 Before starting, please download Visual Studio and C# for mobile development and install it. Then, to build the application, open the solution file using Visual Studio and generate the solution. You can use your own phone to deplay the app.
