@@ -11,39 +11,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Acr.UserDialogs" Version="7.1.0.514" />
-    <PackageReference Include="Autofac" Version="6.2.0" />
-    <PackageReference Include="ElaSoftwareCommon" Version="1.3.0" />
-    <PackageReference Include="ElaTagClassLibrary" Version="1.3.0" />
-    <PackageReference Include="Plugin.BluetoothLE" Version="6.3.0.19" />
+    <PackageReference Include="Acr.UserDialogs" Version="7.2.0.534" />
+    <PackageReference Include="Autofac" Version="6.3.0" />
+    <PackageReference Include="ElaSoftwareCommon" Version="1.3.8" />
+    <PackageReference Include="ElaTagClassLibrary" Version="1.3.11" />
     <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
-    <PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.11" />
-    <PackageReference Include="VG.XFShapeView" Version="1.0.5" />
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.14" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="1.3.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Ressources\Images.xaml.cs">
-      <DependentUpon>Images.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Ressources\Colors.xaml.cs">
-      <DependentUpon>Colors.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Ressources\Fonts.xaml.cs">
-      <DependentUpon>Fonts.xaml</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="Ressources\Fonts.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\MainPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Popups\ListTags.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
+    <ProjectReference Include="..\Plugin.BluetoothLE.Android\Plugin.BluetoothLE.Android.csproj" />
+    <ProjectReference Include="..\Plugin.BluetoothLE.iOS\Plugin.BluetoothLE.iOS.csproj" />
   </ItemGroup>
 </Project>

@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.OS;
 using Android;
 using AndroidX.Core.App;
+using AndroidX.AppCompat.App;
 
 namespace EasyProbe.Droid
 {
@@ -18,7 +19,7 @@ namespace EasyProbe.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-
+            AppCompatDelegate.DefaultNightMode = AppCompatDelegate.ModeNightNo;
             base.OnCreate(savedInstanceState);
             
             Rg.Plugins.Popup.Popup.Init(this);

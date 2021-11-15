@@ -12,11 +12,12 @@ namespace EasyProbe.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
-        public MainViewModel()
+        async Task OnBluetooth_OnAppearing()
         {
-            this.BluetoothService.StartScanner();
+            await Task.Delay(1000);
             MessagingCenter.Subscribe<App, TagBluetooth>((App)Application.Current, MessengerKeys.UPDATE_TAG, OnUpdate);
             MessagingCenter.Subscribe<App, string>((App)Application.Current, MessengerKeys.UPDATE_FILTER, OnUpdateFilter);
+            BluetoothService.StartScanner();
         }
 
         void OnUpdate(App sender, TagBluetooth tag)
@@ -44,7 +45,7 @@ namespace EasyProbe.ViewModel
         public ICommand CommandPicto2 => new AsyncCommand(commandPicto2);
         public ICommand CommandPicto3 => new AsyncCommand(commandPicto3);
         public ICommand OpenBasicWebsite => new AsyncCommand(OnOpenBasicWebsite);
-
+        public ICommand Bluetooth_OnAppearing => new AsyncCommand(OnBluetooth_OnAppearing);
 
         async Task OnOpenBasicWebsite()
         {

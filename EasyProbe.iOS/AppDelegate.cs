@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
+﻿
 using Foundation;
 using UIKit;
-using XFShapeView.iOS;
 
 namespace EasyProbe.iOS
 {
@@ -24,7 +20,6 @@ namespace EasyProbe.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
 
-            ShapeRenderer.Init();
             global::Xamarin.Forms.Forms.Init();
             Rg.Plugins.Popup.Popup.Init();
             LoadApplication(new App());

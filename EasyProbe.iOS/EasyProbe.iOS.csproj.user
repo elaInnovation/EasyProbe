@@ -2,6 +2,7 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <SelectedDevice>Appareil local</SelectedDevice>
+    <ActiveDebugProfile>Appareil local</ActiveDebugProfile>
     <TargetiOSDevice>&lt;%3fxml version="1.0" encoding="UTF-8"%3f&gt;
 &lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
 &lt;plist version="1.0"&gt;
@@ -22,7 +23,6 @@
 </TargetiOSDevice>
     <DeveloperId>be.elainnovation%40icloud.com</DeveloperId>
     <DevelopmentTeamId>UUH5ZAW7D2</DevelopmentTeamId>
-    <DefaultDevice>iPhone 12 iOS 14.4</DefaultDevice>
-    <ActiveDebugProfile>Appareil local</ActiveDebugProfile>
+    <DefaultDevice>iPhone 13 iOS 15.0</DefaultDevice>
   </PropertyGroup>
 </Project>

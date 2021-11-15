@@ -12,3 +12,10 @@ EasyProbe.iOS/obj
 .vs/EasyProbe/v16/.suo
 .vs/EasyProbe/v16/.suo
 *.user
+Plugin.BluetoothLE/bin
+Plugin.BluetoothLE/obj
+Plugin.BluetoothLE.Android/bin
+Plugin.BluetoothLE.Android/obj
+Plugin.BluetoothLE.iOS/bin
+Plugin.BluetoothLE.iOS/obj
+.vs/EasyProbe/v16/.suo

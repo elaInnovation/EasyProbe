@@ -2,21 +2,22 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:viewModels="clr-namespace:EasyProbe.ViewModel"
-             xmlns:xfshapeview="clr-namespace:XFShapeView;assembly=XFShapeView"
+             xmlns:xcl="http://xamarin.com/schemas/2020/toolkit" 
              x:Class="EasyProbe.Views.MainPage"
              NavigationPage.HasNavigationBar="False">
 
+    <ContentPage.Behaviors>
+        <xcl:EventToCommandBehavior EventName="Appearing" Command="{Binding Bluetooth_OnAppearing}"/>
+    </ContentPage.Behaviors>
+    
     <ContentPage.BindingContext>
         <viewModels:MainViewModel/>
     </ContentPage.BindingContext>
     
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical">
+        <StackLayout Orientation="Vertical" >
             <Grid VerticalOptions="FillAndExpand">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
@@ -71,74 +72,62 @@
                 </StackLayout>
 
 
-                <RelativeLayout Grid.Row="4" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
+                <Grid Grid.Row="4" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                     <Image Source="{StaticResource VAGUES}" Aspect="AspectFill" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1, Constant=0}"/>
-                    <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1, Constant=1}"
-                          Margin="30,0,30,0">
+                    <Grid HorizontalOptions="CenterAndExpand" Margin="0,0,0,10">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
+
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="70"/>
                         </Grid.RowDefinitions>
-
-                        <xfshapeview:ShapeView
-                            Grid.Column="0"
-                            Grid.Row="1"
-                            ShapeType="Circle"
-							Margin="0,0,0,0"
-							HeightRequest="50"
-							WidthRequest="50"
-                            Color="{Binding Picto1}">
-                            <xfshapeview:ShapeView.Content>
+                        <Frame BackgroundColor="{Binding Picto1}" Margin="10,0,10,0"
+                               Grid.Column="0"
+                               Grid.Row="1"
+                               CornerRadius="30">
+                            <Frame.Content>
                                 <ImageButton Source="{StaticResource PICTO_AUTONOMIE}" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="30" BackgroundColor="Transparent"
                                              Command="{Binding CommandPicto1}"/>
-                            </xfshapeview:ShapeView.Content>
-                            <xfshapeview:ShapeView.GestureRecognizers>
+                            </Frame.Content>
+                            <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding CommandPicto1}"/>
-                            </xfshapeview:ShapeView.GestureRecognizers>
-                        </xfshapeview:ShapeView>
+                            </Frame.GestureRecognizers>
+                        </Frame>
 
-                        <xfshapeview:ShapeView
-                            Grid.Column="1"
-                            Grid.Row="1"
-                            ShapeType="Circle"
-							Margin="0,0,0,0"
-							HeightRequest="50"
-							WidthRequest="50"
-                            Color="{Binding Picto2}">
-                            <xfshapeview:ShapeView.Content>
+                        <Frame BackgroundColor="{Binding Picto2}"  Margin="10,0,10,0"
+                               Grid.Column="1"
+                               Grid.Row="1"
+                               CornerRadius="30">
+                            <Frame.Content>
                                 <ImageButton Source="{StaticResource PICTO_TEMP}" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="30" BackgroundColor="Transparent"
                                               Command="{Binding CommandPicto2}"/>
-                            </xfshapeview:ShapeView.Content>
-                            <xfshapeview:ShapeView.GestureRecognizers>
+                            </Frame.Content>
+                            <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding CommandPicto2}"/>
-                            </xfshapeview:ShapeView.GestureRecognizers>
-                        </xfshapeview:ShapeView>
+                            </Frame.GestureRecognizers>
+                        </Frame>
 
-                        <xfshapeview:ShapeView
-                            Grid.Column="2"
-                            Grid.Row="1"
-                            ShapeType="Circle"
-							Margin="0,0,0,0"
-							HeightRequest="50"
-							WidthRequest="50"
-                            Color="{Binding Picto3}">
-                            <xfshapeview:ShapeView.Content>
+                        <Frame BackgroundColor="{Binding Picto3}"  Margin="10,0,10,0"
+                               Grid.Column="2"
+                               Grid.Row="1"
+                               CornerRadius="30">
+                            <Frame.Content>
                                 <ImageButton Source="{StaticResource PICTO_IP}" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="30" BackgroundColor="Transparent"
                                               Command="{Binding CommandPicto3}"/>
-                            </xfshapeview:ShapeView.Content>
-                            <xfshapeview:ShapeView.GestureRecognizers>
+                            </Frame.Content>
+                            <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding CommandPicto3}"/>
-                            </xfshapeview:ShapeView.GestureRecognizers>
-                        </xfshapeview:ShapeView>
-
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                      
+                  
 
                     </Grid>
-                </RelativeLayout>
+                </Grid>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

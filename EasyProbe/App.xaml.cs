@@ -1,5 +1,7 @@
 ﻿using EasyProbe.ViewModel.Base;
 using EasyProbe.Views;
+using Plugin.BluetoothLE;
+using Plugin.BluetoothLE.iOS;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -21,6 +23,9 @@ namespace EasyProbe
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
+            if (Xamarin.Forms.Device.RuntimePlatform.Equals(Xamarin.Forms.Device.iOS))
+                CrossBleAdapteriOS.Init();
+
         }
     }
 }

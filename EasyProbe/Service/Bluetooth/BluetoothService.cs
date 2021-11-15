@@ -2,10 +2,13 @@
 using EasyProbe.Tools;
 using ElaTagClassLibrary.ElaTags.Bluetooth.Data;
 using Plugin.BluetoothLE;
+using Plugin.BluetoothLE.Android;
+using Plugin.BluetoothLE.iOS;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace EasyProbe.Service.Bluetooth
@@ -13,6 +16,8 @@ namespace EasyProbe.Service.Bluetooth
     public partial class BluetoothService : IBluetoothService
     {
         private string Filter = "PROBE";
+        IDisposable adapter = null;
+        private bool IsScanning = false;
 
         private Dictionary<String, TagBluetooth> devices = new Dictionary<string, TagBluetooth>();
         public TagBluetooth CurrentTag { get; set; }
@@ -25,59 +30,63 @@ namespace EasyProbe.Service.Bluetooth
 
         public void StartScanner()
         {
-            try
-            {
-                if (CheckBluetoothState() == false)
+ 
+                try
                 {
-                    if (Device.RuntimePlatform == Device.Android)
-                        CrossBleAdapter.Current.SetAdapterState(true);
+                    if (Xamarin.Forms.Device.RuntimePlatform == Xamarin.Forms.Device.Android)
+                    {
+                        if (CrossBleAdapterAndroid.Current.Status == AdapterStatus.PoweredOff ||
+                                CrossBleAdapterAndroid.Current.Status == AdapterStatus.Resetting ||
+                                CrossBleAdapterAndroid.Current.Status == AdapterStatus.Unauthorized ||
+                                CrossBleAdapterAndroid.Current.Status == AdapterStatus.Unsupported)
+                        {
+                            CrossBleAdapterAndroid.Current.SetAdapterState(true);
+                        }
+
+                        adapter = CrossBleAdapterAndroid.Current.Scan().Subscribe(scanResult =>
+                        {
+                            receiveScanResult(scanResult);
+                            IsScanning = true;
+                        });
+                    }
                     else
                     {
-                        CrossBleAdapter.Current.OpenSettings();
-                        return;
+                        if (CrossBleAdapteriOS.Current.Status == AdapterStatus.PoweredOff ||
+                           CrossBleAdapteriOS.Current.Status == AdapterStatus.Resetting ||
+                           CrossBleAdapteriOS.Current.Status == AdapterStatus.Unauthorized ||
+                           CrossBleAdapteriOS.Current.Status == AdapterStatus.Unsupported)
+                        {
+                            if (CrossBleAdapteriOS.Current.CanOpenSettings())
+                                CrossBleAdapteriOS.Current.OpenSettings();
+                        }
+                        else
+                        {
+                            adapter = CrossBleAdapteriOS.Current.Scan().Subscribe(scanResult =>
+                            {
+                                receiveScanResult(scanResult);
+                                IsScanning = true;
+                            });
+                        }
                     }
                 }
-
-                CrossBleAdapter.Current.ScanExtra(new ScanConfig()).Subscribe(scanResult =>
+                catch (Exception e)
                 {
-                    if (scanResult.AdvertisementData.LocalName != null)
-                    {
-                        receiveScanResult(scanResult);
-                    }
-                });
-            }
-            catch (Exception)
-            {
+                    
+                }
 
-            }
-        }
-
-        public bool CheckBluetoothState()
-        {
-            try
-            {
-
-                if (CrossBleAdapter.Current.Status == AdapterStatus.PoweredOff ||
-                   CrossBleAdapter.Current.Status == AdapterStatus.Resetting ||
-                   CrossBleAdapter.Current.Status == AdapterStatus.Unauthorized ||
-                   CrossBleAdapter.Current.Status == AdapterStatus.Unsupported)
-                    return false;
-                else
-                    return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
         }
 
         public void StopScanner()
         {
-            CrossBleAdapter.Current.StopScan();
+            adapter.Dispose();
+            IsScanning = false;
         }
 
         private void receiveScanResult(IScanResult scanResult)
         {
+
+            if(scanResult.AdvertisementData.LocalName == null) { return; }
+
             if (scanResult.AdvertisementData.LocalName.Equals("")) { return; }
 
             if (this.Filter == "" || scanResult.AdvertisementData.LocalName.ToUpper().Contains(this.Filter.ToUpper()))
@@ -95,7 +104,7 @@ namespace EasyProbe.Service.Bluetooth
                                 RawData = scanResult,
                                 Temperature = Converter.StringToCelcius(raw.StrDataValue),
                                 Farenheit = Converter.CelciusToFaren(raw.StrDataValue),
-                                TagName = scanResult.Device.Name,
+                                TagName = scanResult.AdvertisementData.LocalName,
                                 Rssi = scanResult.Rssi
                             };
                             this.CurrentTag = tag;
@@ -105,6 +114,7 @@ namespace EasyProbe.Service.Bluetooth
                                 this.devices.Add(tag.TagName, tag);
                             MessagingCenter.Send<App, TagBluetooth>((App)Application.Current, MessengerKeys.UPDATE_TAG, this.CurrentTag);
                         }
+                       
                     }
                 }
             }
@@ -121,6 +131,11 @@ namespace EasyProbe.Service.Bluetooth
         public object GetPropValue(object src, string propName)
         {
             return src.GetType().GetProperty(propName).GetValue(src, null);
+        }
+
+        public bool CheckBluetoothState()
+        {
+            throw new NotImplementedException();
         }
     }
 

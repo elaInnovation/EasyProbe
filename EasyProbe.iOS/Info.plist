@@ -20,20 +20,15 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>8.0</string>
+	<string>9.0</string>
 	<key>CFBundleDisplayName</key>
 	<string>EasyProbe</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.ela.innovation.easyprobe</string>
+	<string>com.ela.innovation.easyprobe.new</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>CFBundleName</key>
 	<string>EasyProbe</string>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>bluetooth-central</string>
-		<string>bluetooth-peripheral</string>
-	</array>
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>Allow Bluetooth to detect ELA sensors around you</string>
 	<key>NSBluetoothAlwaysUsageDescription</key>
@@ -44,5 +39,13 @@
 	<string>Assets.xcassets/AppIcons.appiconset</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcons.appiconset</string>
+	<key>UIRequiresFullScreen</key>
+	<true/>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
+	<key>UIMainStoryboardFile</key>
+	<string>LaunchScreen</string>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
 </dict>
 </plist>
