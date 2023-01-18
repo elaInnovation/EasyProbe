@@ -9,6 +9,7 @@
     <x:String x:Key="PICTO_TEMP">picto_temp.png</x:String>
     <x:String x:Key="VAGUES">vagues.png</x:String>
     <x:String x:Key="SEARCH">search.png</x:String>
+    <x:String x:Key="PICTO_TIME">picto_time.png</x:String>
 
 </ResourceDictionary>
 

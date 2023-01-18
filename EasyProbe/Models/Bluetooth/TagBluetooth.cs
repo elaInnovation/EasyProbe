@@ -13,6 +13,10 @@ namespace EasyProbe.Models.Bluetooth
         public float Temperature = 0.0f;
         public float Farenheit = 0.0f;
         public int Rssi = 0;
+        public float Battery = 0;
+        public int Counter = 0;
+        public bool State = false;
+        public float TimeUsed = 0.0f;
 
         public string TagName
         {

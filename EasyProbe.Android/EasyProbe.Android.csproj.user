@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <SelectedDevice>pixel_2_pie_9_0_-_api_28</SelectedDevice>
-    <ActiveDebugProfile>pixel_2_pie_9_0_-_api_28</ActiveDebugProfile>
+    <SelectedDevice>pixel_5_-_api_30</SelectedDevice>
+    <ActiveDebugProfile>Pixel 5 - API 30 %28Android 11.0 - API 30%29</ActiveDebugProfile>
     <AndroidDesignerPreferredTheme>MainTheme</AndroidDesignerPreferredTheme>
-    <DefaultDevice>pixel_2_pie_9_0_-_api_28</DefaultDevice>
+    <DefaultDevice>pixel_5_-_api_30</DefaultDevice>
+    <SelectedPlatformGroup>Emulator</SelectedPlatformGroup>
   </PropertyGroup>
 </Project>

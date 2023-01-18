@@ -22,9 +22,10 @@ namespace EasyProbe
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            
             if (Xamarin.Forms.Device.RuntimePlatform.Equals(Xamarin.Forms.Device.iOS))
                 CrossBleAdapteriOS.Init();
+            MainPage = new NavigationPage(new MainPage());
 
         }
     }

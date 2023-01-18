@@ -22,9 +22,11 @@ namespace EasyProbe.ViewModel
 
         void OnUpdate(App sender, TagBluetooth tag)
         {
+            TimeSpan time = TimeSpan.FromSeconds(tag.TimeUsed);
+
             TagName = tag.TagName;
-            TagTemperature = tag.Temperature;
-            TagFarenheit = tag.Farenheit;
+            TagTemperature = tag.TimeUsed;
+            TagFarenheit = time.ToString("hh':'mm':'ss");
         }
 
         void OnUpdateFilter(App sender, string filter)
@@ -33,9 +35,11 @@ namespace EasyProbe.ViewModel
             TagBluetooth tag = BluetoothService.GetLastItem(filter);
             if(tag != null)
             {
+                TimeSpan time = TimeSpan.FromSeconds(tag.TimeUsed);
+
                 TagName = tag.TagName;
-                TagTemperature = tag.Temperature;
-                TagFarenheit = tag.Farenheit;
+                TagTemperature = tag.TimeUsed;
+                TagFarenheit = time.ToString("hh':'mm':'ss");
             }
         }
 
@@ -89,7 +93,7 @@ namespace EasyProbe.ViewModel
         #region Binding Variables
         private string tagName = String.Empty;
         private float tagTemperature = 0.0f;
-        private float tagFaren = 0.0f;
+        private string tagFaren = String.Empty;
         private Color picto1 = Color.White;
         private Color picto2 = Color.White;
         private Color picto3 = Color.White;
@@ -107,7 +111,7 @@ namespace EasyProbe.ViewModel
             set => SetProperty(ref tagTemperature, value);
         }
 
-        public float TagFarenheit
+        public string TagFarenheit
         {
             get => tagFaren;
             set => SetProperty(ref tagFaren, value);

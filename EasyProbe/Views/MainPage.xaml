@@ -61,8 +61,8 @@
 
                 <StackLayout Grid.Row="2" HorizontalOptions="CenterAndExpand" VerticalOptions="End" 
                              IsVisible="{Binding Picto2Page}">
-                    <Label Text="{Binding TagTemperature, StringFormat='{0:F2}°C'}" TextColor="{StaticResource ela_light_blue}" FontFamily="{StaticResource RegularFont}" FontSize="70" FontAttributes="Bold"/>
-                    <Label Text="{Binding TagFarenheit, StringFormat='{0:F2}°F'}" TextColor="{StaticResource ela_light_blue}" FontFamily="{StaticResource RegularFont}" FontSize="20" HorizontalOptions="EndAndExpand" Margin="0,-20,0,0"/>
+                    <Label Text="{Binding TagFarenheit}" TextColor="{StaticResource ela_light_blue}" FontFamily="{StaticResource RegularFont}" FontSize="70" FontAttributes="Bold"/>
+                    <Label Text="{Binding TagTemperature, StringFormat='{0:F2} s'}" TextColor="{StaticResource ela_light_blue}" FontFamily="{StaticResource RegularFont}" FontSize="20" HorizontalOptions="EndAndExpand" Margin="0,-20,0,0"/>
                 </StackLayout>
 
                 <StackLayout Grid.Row="2" HorizontalOptions="CenterAndExpand" VerticalOptions="End" 
@@ -103,7 +103,7 @@
                                Grid.Row="1"
                                CornerRadius="30">
                             <Frame.Content>
-                                <ImageButton Source="{StaticResource PICTO_TEMP}" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="30" BackgroundColor="Transparent"
+                                <ImageButton Source="{StaticResource PICTO_TIME}" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="30" BackgroundColor="Transparent"
                                               Command="{Binding CommandPicto2}"/>
                             </Frame.Content>
                             <Frame.GestureRecognizers>
