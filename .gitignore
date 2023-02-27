@@ -21,3 +21,4 @@ Plugin.BluetoothLE.iOS/obj
 .vs/EasyProbe/v16/.suo
 /.vs/EasyProbe
 /.vs/ProjectEvaluation
+/EasyProbe.Android/EasyProbe.Android.csproj.user
